@@ -18,17 +18,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript">
-	<%
+<%
 	if(re>0){%>
-		alert("즐겨찾기 코멘트가 저장되었습니다.");
-		history.go(-3);
-	<%
+	
+<script>
+
+	alert("즐겨찾기 코멘트가 저장되었습니다.");
+	location.href="favorite.jsp";
+
+</script>	
+<%
 	}else{
-		response. sendRedirect("updateForm.jsp");
+		response.sendRedirect("updateForm.jsp");
 	}
-	%>
-</script>
+%>
 	
 </head>
 <body>

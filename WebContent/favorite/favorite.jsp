@@ -46,10 +46,10 @@
 		
 		<c:forEach var="Favorite" items="${listModel.list}">
 			<tr>
-				<td><img src="">${Favorite.s_image}</td>
-				<td><a href="#">${Favorite.s_sname }</a></td>
+				<td><img src="${Favorite.s_image}">${Favorite.s_image}</td>
+				<td><a href="${Favorite.s_shopurl}">${Favorite.s_sname }</a></td>
 				<td><a id="comentlink" href="detail.jsp?f_num=${Favorite.f_num}"><img src="../resources/images/favoriteImg/coment.png"></a></td>
-				<td><a id="shoplink" href="http://${Favorite.s_shopurl }">
+				<td><a id="shoplink" href="${Favorite.s_shopurl }">
 					<img src="../resources/images/favoriteImg/home2.png" onmouseover='this.src="../resources/images/favoriteImg/home1.png"' onmouseout='this.src="../resources/images/favoriteImg/home2.png"'>
 					</a></td>
 				<td><a id="deleteRow" href="deleteAction.jsp?f_num=${Favorite.f_num}"><img src="../resources/images/favoriteImg/del.png"></a></td>
