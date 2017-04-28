@@ -13,12 +13,13 @@
 <script type="text/javascript"  src="../resources/js/sidebar/sidebar.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style type="text/css">
-	#bodys{
+	body{
 		position: relative ;
 		width: 100%;
 		height : 600px;
 		border: 1px solid black;
 		float: none;
+		margin:0px;
 	}
 </style>
 <title>Insert title here</title>

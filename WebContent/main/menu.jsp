@@ -10,8 +10,10 @@
 	#menu{
 		position: relative ;
 		width: 100%;
-		height : 50px;
-		border: 1px solid black;
+		height : 44px;
+		background: black;
+		color: white;
+		font-family: Apercu, Arial, "Helvetica Neue", Helvetica, sans-serif;
 	}
 	
 	#menu li {
