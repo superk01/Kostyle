@@ -25,7 +25,7 @@
 <div id="menu">
 	<ul>
 		<li><a href ="template.jsp?body=main.jsp">메인</a></li>
-		<li><a href ="template.jsp?body=../stats/hitcountindex.jsp">검색</a></li>
+		<li><a href ="template.jsp?body=../stats/hitcountindex.jsp">상품리스트</a></li>
 
 	</ul>
 </div>

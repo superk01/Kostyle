@@ -11,8 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import stats.action.StatsAction;
 import stats.action.StatsActionForward;
-import stats.action.StatsHitCountInsertAction;
-import stats.action.StatsHitCountListAction;
+import stats.model.SearchKeyword;
+import stats.action.HitCountInsertAction;
+import stats.action.HitCountListAction;
+import stats.action.SearchKeywordInsertAction;
+import stats.action.SearchKeywordListAction;
 
 @WebServlet("*.ju")
 public class StatsController extends HttpServlet {
@@ -31,7 +34,7 @@ public class StatsController extends HttpServlet {
     	StatsAction action = null;
    	
     	if(command.equals("detail.ju")){
-    	action = new StatsHitCountInsertAction();	
+    	action = new HitCountInsertAction();	
     		
     		try {
 				forward = action.execute(request, response);
@@ -39,7 +42,23 @@ public class StatsController extends HttpServlet {
 				e.printStackTrace();
 			}
     	}else if(command.equals("hitcountlist.ju")){
-    		action = new StatsHitCountListAction();
+    		action = new HitCountListAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}else if(command.equals("searchkeyword.ju")){
+    		action = new SearchKeywordInsertAction();
+    		
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}else if(command.equals("searchkeywordlist.ju")){
+    		action = new SearchKeywordListAction();
+    		
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
@@ -47,7 +66,6 @@ public class StatsController extends HttpServlet {
 			}
     	}
     	
-    	    	
     	
     	if(forward != null){
     		if(forward.isRedirect()){

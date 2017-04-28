@@ -23,4 +23,17 @@
 			where s_shopurl = #{s_shopurl}
 	</select>
 	
+	<insert id="insertSearchKeyword" parameterType="SearchKeyword">
+		insert into searchkeyword(
+			c_num, sk_searchkey, sk_date
+		) 
+		values(
+			#{c_num}, #{sk_searchkey}, SYSDATE
+		)
+	</insert>
+	
+	<select id="listSearchKeyword" resultType="SearchKeyword">
+		select * from searchkeyword
+	</select>	
+	
 </mapper>

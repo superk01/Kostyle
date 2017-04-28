@@ -15,7 +15,7 @@ public class StatsActionForward {
 	public boolean isRedirect() {
 		return isRedirect;
 	}
-	public void setRedirect(boolean isRedirect) {
+	public void setisRedirect(boolean isRedirect) {
 		this.isRedirect = isRedirect;
 	}
 	public String getPath() {

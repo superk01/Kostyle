@@ -7,6 +7,7 @@
 	<typeAliases>
 		<typeAlias type="stats.model.HitCount" alias="HitCount"/>
 		<typeAlias type="stats.model.ShoppingMall" alias="ShoppingMall"/>
+		<typeAlias type="stats.model.SearchKeyword" alias="SearchKeyword"/>
 	</typeAliases>
 	
 	<environments default="development">

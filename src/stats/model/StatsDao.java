@@ -32,7 +32,6 @@ public class StatsDao {
 		SqlSession session = getSqlSessionFactory().openSession();
 		int re = -1;
 
-		System.out.println("insert count "+hitCount.getS_num());
 		
 		try {
 			re = session.getMapper(StatsMapper.class).insertHitCount(hitCount);
@@ -65,11 +64,9 @@ public class StatsDao {
 		SqlSession session = getSqlSessionFactory().openSession();
 		ShoppingMall shoppingMall = null;
 		
-		System.out.println("getsnum in dao -" + s_shopurl+"-");
 		
 		try {
 			shoppingMall = session.getMapper(StatsMapper.class).getSNum(s_shopurl);
-			System.out.println("get shoppingMall in dao "+shoppingMall.getS_sname());
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -77,6 +74,40 @@ public class StatsDao {
 			session.close();
 		}
 		return shoppingMall;
+	}
+	
+	public int insertSearchKeyword(SearchKeyword searchKeyword){
+		SqlSession session = getSqlSessionFactory().openSession();
+		int re = -1;
+		
+		
+		try {
+			re = session.getMapper(StatsMapper.class).insertSearchKeyword(searchKeyword);
+			if(re >0){
+				session.commit();
+			}else{
+				session.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			session.close();
+		}
+		return re;
+	}
+	
+	public List<SearchKeyword> listSearchKeyword(){
+		SqlSession session = getSqlSessionFactory().openSession();
+		List<SearchKeyword> list = null;
+		
+		try {
+			list = session.getMapper(StatsMapper.class).listSearchKeyword();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			session.close();
+		}
+		return list;
 	}
 	
 	

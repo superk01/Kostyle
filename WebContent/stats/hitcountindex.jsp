@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<script src="../resources/js/stats/jquery.js" type="text/javascript"></script>
+<script src="../resources/js/jquery.js" type="text/javascript"></script>
 <script src="../resources/js/stats/hitcount.js" type="text/javascript"></script>
 </head>
 <body>
